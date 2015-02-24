@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="499" width="320" height="69"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qal-fT-Ssd">
-                            <rect key="frame" x="113" y="15" width="95" height="40"/>
+                            <rect key="frame" x="190" y="15" width="95" height="40"/>
                             <state key="normal" image="write_image.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -27,17 +27,8 @@
                                 <action selector="onNewButton:" destination="-1" eventType="touchUpInside" id="S7O-Ly-WvI"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69U-Pe-Zc0">
-                            <rect key="frame" x="217" y="15" width="95" height="40"/>
-                            <state key="normal" image="profile_image.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="onProfileButton:" destination="-1" eventType="touchUpInside" id="08U-9f-qA1"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqm-S2-4iq">
-                            <rect key="frame" x="8" y="15" width="93" height="40"/>
+                            <rect key="frame" x="37" y="15" width="93" height="40"/>
                             <state key="normal" image="explore_image.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -74,7 +65,6 @@
     </objects>
     <resources>
         <image name="explore_image.png" width="40" height="40"/>
-        <image name="profile_image.png" width="40" height="40"/>
         <image name="write_image.png" width="40" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

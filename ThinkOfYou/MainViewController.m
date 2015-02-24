@@ -19,7 +19,6 @@
 
 @property (nonatomic, strong) UINavigationController *nvcHome;
 @property (nonatomic, strong) UINavigationController *nvcNew;
-@property (nonatomic, strong) UINavigationController *nvcProfile;
 
 
 
@@ -33,8 +32,7 @@
     
     self.nvcHome = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
     self.nvcNew = [[UINavigationController alloc] initWithRootViewController:[[ComposeViewController alloc] init]];
-    self.nvcProfile = [[UINavigationController alloc] initWithRootViewController:[[ProfileViewController alloc] init]];
-
+    
     [self.contentView addSubview:self.nvcHome.view];
     self.nvcHome.view.frame = self.contentView.frame;
 }
@@ -73,12 +71,4 @@
     self.nvcNew.view.frame = self.contentView.frame;
 }
 
-- (IBAction)onProfileButton:(id)sender {
-    NSArray *viewsToRemove = [self.contentView subviews];
-    for (UIView *v in viewsToRemove) {
-        [v removeFromSuperview];
-    }
-    [self.contentView addSubview:self.nvcProfile.view];
-    self.nvcProfile.view.frame = self.contentView.frame;
-}
 @end

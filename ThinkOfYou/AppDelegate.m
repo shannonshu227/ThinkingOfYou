@@ -35,7 +35,6 @@
 //    testObject[@"foo"] = @"bar";
 //    [testObject saveInBackground];
     
-    [Parse setApplicationId:@"Oo5nThgZFzWCrMifE0axyyFt3eUgbXMvo4IW4bzK" clientKey:@"bllTDF7LwRlEdCYhw3l0RDmqaj39DtnCbczcn1j7"];
     [PFFacebookUtils initializeFacebook];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

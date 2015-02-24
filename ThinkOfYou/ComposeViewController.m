@@ -30,4 +30,9 @@
 }
 
 
+- (IBAction)onPhotoButton:(id)sender {
+}
+
+- (IBAction)onSendButton:(id)sender {
+}
 @end

@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 - (IBAction)onHomeButton:(id)sender;
 - (IBAction)onNewButton:(id)sender;
-- (IBAction)onProfileButton:(id)sender;
 
 @end
