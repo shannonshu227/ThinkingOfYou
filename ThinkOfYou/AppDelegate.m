@@ -35,16 +35,16 @@
 //    testObject[@"foo"] = @"bar";
 //    [testObject saveInBackground];
     
-    [PFFacebookUtils initializeFacebook];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     if (![PFUser currentUser] && ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [PFFacebookUtils initializeFacebook];
+
         PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
         loginViewController.delegate = self;
         [loginViewController setFields:PFLogInFieldsFacebook];
         self.window.rootViewController = loginViewController;
-        
+
     } else {
         self.window.rootViewController = [[MainViewController alloc] init];
     }
