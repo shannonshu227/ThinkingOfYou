@@ -31,10 +31,6 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     if (![PFUser currentUser] && ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -157,7 +153,6 @@
                     } else {
                         [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
                         [self.window.rootViewController presentViewController:[[MainViewController alloc] init] animated:YES completion:nil];
-
 
                     }
                 }];
