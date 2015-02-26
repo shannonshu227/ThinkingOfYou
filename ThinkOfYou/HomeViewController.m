@@ -23,7 +23,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,15 +31,15 @@
     
     self.title = @"Thinking Of You";
     //[[self setTintColor:[UIColor redColor]] ];
-
+    
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ProfileCell" bundle:nil] forCellReuseIdentifier:@"ProfileCellID"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ContentCell" bundle:nil] forCellReuseIdentifier:@"ContentCellID"];
-
+    
     self.users = [[NSArray alloc] init];
     self.remindersOfUser = [[NSMutableDictionary alloc] init];
     self.reminders = [[NSArray alloc] init];
-
+    
     PFUser *currentUser = [PFUser currentUser];
     self.currentUser =currentUser;
     
@@ -50,7 +50,7 @@
             
             // The find succeeded. The first 100 objects are available in objects
             self.users = users;
-           
+            
             PFQuery *reminderQuery = [PFQuery queryWithClassName:@"Reminder"];
             [reminderQuery findObjectsInBackgroundWithBlock:^(NSArray *reminders, NSError *error) {
                 if (!error) {
@@ -76,7 +76,7 @@
                     NSLog(@"Errors: %@ %@", error, [error userInfo]);
                 }
             }];
-
+            
             NSLog(@"users: %lu", (unsigned long)self.users.count);
         } else {
             // Log details of the failure
@@ -144,22 +144,25 @@
     } else {
         return 106;
     }
-
+    
 }
-
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-   DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
-    NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
-    PFObject *reminder = userReminderArray[indexPath.row - 1];
-    dvc.reminder = reminder;
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
-    nvc.navigationBar.translucent = NO;
-    
-    [self presentViewController:nvc animated:YES completion:nil];
+    if (indexPath.row == 0) {
+        NSLog(@"do nothing");
+    } else {
+        DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
+        NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
+        PFObject *reminder = userReminderArray[indexPath.row - 1];
+        dvc.reminder = reminder;
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
+        nvc.navigationBar.translucent = NO;
+        
+        [self presentViewController:nvc animated:YES completion:nil];
+    }
     
 }
 

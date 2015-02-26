@@ -11,6 +11,9 @@
 		1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1712B9C51A9EBF3500C225C3 /* ProfileCell.xib */; };
 		177693F71A9EEC6000515073 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 177693F51A9EEC6000515073 /* ContentCell.m */; };
 		177693F81A9EEC6000515073 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177693F61A9EEC6000515073 /* ContentCell.xib */; };
+		177694011A9FABF100515073 /* cake.png in Resources */ = {isa = PBXBuildFile; fileRef = 177693FE1A9FABF100515073 /* cake.png */; };
+		177694021A9FABF100515073 /* kiss.png in Resources */ = {isa = PBXBuildFile; fileRef = 177693FF1A9FABF100515073 /* kiss.png */; };
+		177694031A9FABF100515073 /* love.png in Resources */ = {isa = PBXBuildFile; fileRef = 177694001A9FABF100515073 /* love.png */; };
 		17E122D71A98311C0014A2E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D61A98311C0014A2E7 /* main.m */; };
 		17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D91A98311C0014A2E7 /* AppDelegate.m */; };
 		17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E122E11A98311C0014A2E7 /* Images.xcassets */; };
@@ -68,6 +71,9 @@
 		177693F41A9EEC6000515073 /* ContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCell.h; sourceTree = "<group>"; };
 		177693F51A9EEC6000515073 /* ContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCell.m; sourceTree = "<group>"; };
 		177693F61A9EEC6000515073 /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
+		177693FE1A9FABF100515073 /* cake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cake.png; sourceTree = SOURCE_ROOT; };
+		177693FF1A9FABF100515073 /* kiss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiss.png; sourceTree = SOURCE_ROOT; };
+		177694001A9FABF100515073 /* love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love.png; sourceTree = SOURCE_ROOT; };
 		17E122D11A98311C0014A2E7 /* ThinkOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E122D51A98311C0014A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E122D61A98311C0014A2E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -249,6 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				17E123011A9836AE0014A2E7 /* explore_image.png */,
+				177693FE1A9FABF100515073 /* cake.png */,
+				177693FF1A9FABF100515073 /* kiss.png */,
+				177694001A9FABF100515073 /* love.png */,
 				17E123031A9836AE0014A2E7 /* write_image.png */,
 			);
 			name = Images;
@@ -367,6 +376,8 @@
 				17E123041A9836AE0014A2E7 /* explore_image.png in Resources */,
 				17E122FE1A9831680014A2E7 /* MainViewController.xib in Resources */,
 				17E123061A9836AE0014A2E7 /* write_image.png in Resources */,
+				177694021A9FABF100515073 /* kiss.png in Resources */,
+				177694031A9FABF100515073 /* love.png in Resources */,
 				17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */,
 				177693F81A9EEC6000515073 /* ContentCell.xib in Resources */,
 				1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */,
@@ -374,6 +385,7 @@
 				17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */,
 				17E1244B1A9851C80014A2E7 /* HomeViewController.xib in Resources */,
 				8BF765091A9F0034005D2952 /* DetailedMessageController.xib in Resources */,
+				177694011A9FABF100515073 /* cake.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
