@@ -26,9 +26,9 @@
 
 - (id)initWithUser:(NSString *)user andMessage:(NSString *)inputMesage andTimeStamp:(NSString *)timeStamp{
     DetailedMessageController *dm=[[DetailedMessageController alloc]init];
-    self.userName.text=user;
-    self.message.text=inputMesage;
-    self.timeStamp.text=timeStamp;
+    dm.userName.text=user;
+    dm.message.text=inputMesage;
+    dm.timeStamp.text=timeStamp;
     return dm;
 }
 
