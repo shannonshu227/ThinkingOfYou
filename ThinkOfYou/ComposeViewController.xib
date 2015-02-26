@@ -39,6 +39,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-xv-aBb">
                     <rect key="frame" x="8" y="280" width="304" height="30"/>
                     <color key="backgroundColor" red="0.77998317042542276" green="0.81736406245954685" blue="0.86389690896739135" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <color key="tintColor" red="0.85575169340802315" green="0.88565726902173914" blue="0.88500463475086899" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Post reminder!">
                         <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
