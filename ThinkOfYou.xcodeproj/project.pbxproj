@@ -11,6 +11,8 @@
 		1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1712B9C51A9EBF3500C225C3 /* ProfileCell.xib */; };
 		177693F71A9EEC6000515073 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 177693F51A9EEC6000515073 /* ContentCell.m */; };
 		177693F81A9EEC6000515073 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177693F61A9EEC6000515073 /* ContentCell.xib */; };
+		177693FC1A9EF36D00515073 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177693FA1A9EF36D00515073 /* DetailViewController.m */; };
+		177693FD1A9EF36D00515073 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177693FB1A9EF36D00515073 /* DetailViewController.xib */; };
 		17E122D71A98311C0014A2E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D61A98311C0014A2E7 /* main.m */; };
 		17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D91A98311C0014A2E7 /* AppDelegate.m */; };
 		17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E122E11A98311C0014A2E7 /* Images.xcassets */; };
@@ -19,7 +21,6 @@
 		17E122FD1A9831680014A2E7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122FB1A9831680014A2E7 /* MainViewController.m */; };
 		17E122FE1A9831680014A2E7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17E122FC1A9831680014A2E7 /* MainViewController.xib */; };
 		17E123041A9836AE0014A2E7 /* explore_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E123011A9836AE0014A2E7 /* explore_image.png */; };
-		17E123051A9836AE0014A2E7 /* profile_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E123021A9836AE0014A2E7 /* profile_image.png */; };
 		17E123061A9836AE0014A2E7 /* write_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E123031A9836AE0014A2E7 /* write_image.png */; };
 		17E1230F1A9838710014A2E7 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E1230D1A9838710014A2E7 /* ComposeViewController.m */; };
 		17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17E1230E1A9838710014A2E7 /* ComposeViewController.xib */; };
@@ -67,6 +68,9 @@
 		177693F41A9EEC6000515073 /* ContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCell.h; sourceTree = "<group>"; };
 		177693F51A9EEC6000515073 /* ContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCell.m; sourceTree = "<group>"; };
 		177693F61A9EEC6000515073 /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
+		177693F91A9EF36D00515073 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		177693FA1A9EF36D00515073 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		177693FB1A9EF36D00515073 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		17E122D11A98311C0014A2E7 /* ThinkOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E122D51A98311C0014A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E122D61A98311C0014A2E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,7 +85,6 @@
 		17E122FB1A9831680014A2E7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		17E122FC1A9831680014A2E7 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		17E123011A9836AE0014A2E7 /* explore_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore_image.png; sourceTree = SOURCE_ROOT; };
-		17E123021A9836AE0014A2E7 /* profile_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_image.png; sourceTree = SOURCE_ROOT; };
 		17E123031A9836AE0014A2E7 /* write_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write_image.png; sourceTree = SOURCE_ROOT; };
 		17E1230C1A9838710014A2E7 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		17E1230D1A9838710014A2E7 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
@@ -201,6 +204,9 @@
 				177693F41A9EEC6000515073 /* ContentCell.h */,
 				177693F51A9EEC6000515073 /* ContentCell.m */,
 				177693F61A9EEC6000515073 /* ContentCell.xib */,
+				177693F91A9EF36D00515073 /* DetailViewController.h */,
+				177693FA1A9EF36D00515073 /* DetailViewController.m */,
+				177693FB1A9EF36D00515073 /* DetailViewController.xib */,
 			);
 			path = ThinkOfYou;
 			sourceTree = "<group>";
@@ -243,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				17E123011A9836AE0014A2E7 /* explore_image.png */,
-				17E123021A9836AE0014A2E7 /* profile_image.png */,
 				17E123031A9836AE0014A2E7 /* write_image.png */,
 			);
 			name = Images;
@@ -362,9 +367,9 @@
 				17E123041A9836AE0014A2E7 /* explore_image.png in Resources */,
 				17E122FE1A9831680014A2E7 /* MainViewController.xib in Resources */,
 				17E123061A9836AE0014A2E7 /* write_image.png in Resources */,
-				17E123051A9836AE0014A2E7 /* profile_image.png in Resources */,
 				17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */,
 				177693F81A9EEC6000515073 /* ContentCell.xib in Resources */,
+				177693FD1A9EF36D00515073 /* DetailViewController.xib in Resources */,
 				1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */,
 				8FA7C9181A9C63900089CC40 /* BaseViewController.xib in Resources */,
 				17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */,
@@ -388,6 +393,7 @@
 			files = (
 				17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */,
 				1712B9C61A9EBF3500C225C3 /* ProfileCell.m in Sources */,
+				177693FC1A9EF36D00515073 /* DetailViewController.m in Sources */,
 				8FA7C9171A9C63900089CC40 /* BaseViewController.m in Sources */,
 				177693F71A9EEC6000515073 /* ContentCell.m in Sources */,
 				17E122FD1A9831680014A2E7 /* MainViewController.m in Sources */,

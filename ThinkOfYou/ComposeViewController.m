@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Compose";
     // Do any additional setup after loading the view from its nib.
     [[self.reminderTextView layer] setBorderColor:[[UIColor grayColor] CGColor]];
     [[self.reminderTextView layer] setBorderWidth:2.0];

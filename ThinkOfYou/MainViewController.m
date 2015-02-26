@@ -10,6 +10,8 @@
 #import "HomeViewController.h"
 #import "ComposeViewController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface MainViewController ()
 
 @property (nonatomic, strong) UINavigationController *nvcHome;
@@ -26,9 +28,11 @@
     
     self.nvcHome = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
     self.nvcNew = [[UINavigationController alloc] initWithRootViewController:[[ComposeViewController alloc] init]];
-    
     [self.contentView addSubview:self.nvcHome.view];
     self.nvcHome.view.frame = self.contentView.frame;
+    
+    self.buttonView.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {

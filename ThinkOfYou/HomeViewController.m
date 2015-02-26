@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "ProfileCell.h"
 #import "ContentCell.h"
+#import "DetailViewController.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *users;
@@ -28,8 +29,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
-    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellID"];
+    self.title = @"Thinking Of You";
+    //[[self setTintColor:[UIColor redColor]] ];
+
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ProfileCell" bundle:nil] forCellReuseIdentifier:@"ProfileCellID"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ContentCell" bundle:nil] forCellReuseIdentifier:@"ContentCellID"];
@@ -140,6 +142,16 @@
 }
 
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DetailViewController *dvc = [[DetailViewController alloc] init];
+    dvc.reminder = self.reminders[indexPath.row - 1];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
+    nvc.navigationBar.translucent = NO;
+    
+    [self presentViewController:nvc animated:YES completion:nil];
+    
+}
 
 @end
