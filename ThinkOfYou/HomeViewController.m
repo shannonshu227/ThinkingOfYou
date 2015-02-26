@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
+#import "DetailedMessageController.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *objects;
@@ -53,6 +54,12 @@
     PFObject *testObject = self.objects[indexPath.row];
     cell.textLabel.text = testObject[@"foo"];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Test");
+    DetailedMessageController *dm=[[DetailedMessageController alloc]initWithUser:@"Test" andMessage:@"Test" andTimeStamp:@"Test"];
+     [self.navigationController pushViewController:dm animated:YES];
 }
 
 /*

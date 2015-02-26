@@ -44,6 +44,8 @@
 		17E1249B1A9A7A680014A2E7 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E124951A9A7A680014A2E7 /* ParseCrashReporting.framework */; };
 		17E1249C1A9A7A680014A2E7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E124961A9A7A680014A2E7 /* ParseFacebookUtils.framework */; };
 		17E1249D1A9A7A680014A2E7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E124971A9A7A680014A2E7 /* ParseUI.framework */; };
+		8BF765031A9EB64D005D2952 /* DetailedMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF765011A9EB64D005D2952 /* DetailedMessageController.m */; };
+		8BF765041A9EB64D005D2952 /* DetailedMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF765021A9EB64D005D2952 /* DetailedMessageController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,9 @@
 		17E124951A9A7A680014A2E7 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ThinkOfYou/Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		17E124961A9A7A680014A2E7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ThinkOfYou/Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		17E124971A9A7A680014A2E7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ThinkOfYou/Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		8BF765001A9EB64D005D2952 /* DetailedMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedMessageController.h; sourceTree = "<group>"; };
+		8BF765011A9EB64D005D2952 /* DetailedMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedMessageController.m; sourceTree = "<group>"; };
+		8BF765021A9EB64D005D2952 /* DetailedMessageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedMessageController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +172,9 @@
 		17E122D31A98311C0014A2E7 /* ThinkOfYou */ = {
 			isa = PBXGroup;
 			children = (
+				8BF765001A9EB64D005D2952 /* DetailedMessageController.h */,
+				8BF765011A9EB64D005D2952 /* DetailedMessageController.m */,
+				8BF765021A9EB64D005D2952 /* DetailedMessageController.xib */,
 				17E122FF1A9836560014A2E7 /* Resources */,
 				17E122D81A98311C0014A2E7 /* AppDelegate.h */,
 				17E122D91A98311C0014A2E7 /* AppDelegate.m */,
@@ -351,6 +359,7 @@
 				17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */,
 				17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */,
 				17E1244B1A9851C80014A2E7 /* HomeViewController.xib in Resources */,
+				8BF765041A9EB64D005D2952 /* DetailedMessageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +380,7 @@
 				17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */,
 				17E122FD1A9831680014A2E7 /* MainViewController.m in Sources */,
 				17E122D71A98311C0014A2E7 /* main.m in Sources */,
+				8BF765031A9EB64D005D2952 /* DetailedMessageController.m in Sources */,
 				17E1230F1A9838710014A2E7 /* ComposeViewController.m in Sources */,
 				17E123141A98388A0014A2E7 /* ProfileViewController.m in Sources */,
 				17E1244A1A9851C80014A2E7 /* HomeViewController.m in Sources */,
