@@ -33,7 +33,6 @@
     self.nvcHome = [[HomeViewController alloc] initWithSuperID:self];
     self.nvcNew = [[ComposeViewController alloc] init];
 
-    
     [self.contentView addSubview:self.nvcHome.view];
     self.nvcHome.view.frame = self.contentView.frame;
     
@@ -72,7 +71,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
     NSMutableArray *userReminderArray = [self.nvcHome.remindersOfUser objectForKey:self.nvcHome.currentUser.username];
-     NSLog(@"Elements: %i", self.remindersOfUser.count);
     NSLog(@"%@", userReminderArray);
     PFObject *reminder = userReminderArray[indexPath.row - 1];
     dvc.reminder = reminder;
