@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface DetailedMessageController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (weak, nonatomic) IBOutlet UILabel *message;
 @property (weak, nonatomic) IBOutlet UILabel *timeStamp;
+@property (strong, nonatomic) PFObject *reminder;
+- (IBAction)onBackButton:(id)sender;
 
-- (id)initWithUser:(NSString *)user andMessage:(NSString *)inputMesage andTimeStamp:(NSString *)timeStamp;
+
 @end

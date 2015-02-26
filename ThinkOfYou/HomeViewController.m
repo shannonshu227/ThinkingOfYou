@@ -11,7 +11,6 @@
 #import "DetailedMessageController.h"
 #import "ProfileCell.h"
 #import "ContentCell.h"
-#import "DetailViewController.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *users;
@@ -133,20 +132,11 @@
     }
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Test");
-    DetailedMessageController *dm=[[DetailedMessageController alloc]initWithUser:@"Test" andMessage:@"Test" andTimeStamp:@"Test"];
-     [self.navigationController pushViewController:dm animated:YES];
-}
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-=======
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if( indexPath.row == 0 ) {
@@ -154,15 +144,15 @@
     } else {
         return 106;
     }
->>>>>>> bf16d3860c955eeca31f4870e7ddefe8d9cdbd0b
+
 }
 
-*/
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DetailViewController *dvc = [[DetailViewController alloc] init];
+   DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
     dvc.reminder = self.reminders[indexPath.row - 1];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
     nvc.navigationBar.translucent = NO;

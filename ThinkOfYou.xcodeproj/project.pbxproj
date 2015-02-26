@@ -11,8 +11,6 @@
 		1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1712B9C51A9EBF3500C225C3 /* ProfileCell.xib */; };
 		177693F71A9EEC6000515073 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 177693F51A9EEC6000515073 /* ContentCell.m */; };
 		177693F81A9EEC6000515073 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177693F61A9EEC6000515073 /* ContentCell.xib */; };
-		177693FC1A9EF36D00515073 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 177693FA1A9EF36D00515073 /* DetailViewController.m */; };
-		177693FD1A9EF36D00515073 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177693FB1A9EF36D00515073 /* DetailViewController.xib */; };
 		17E122D71A98311C0014A2E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D61A98311C0014A2E7 /* main.m */; };
 		17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D91A98311C0014A2E7 /* AppDelegate.m */; };
 		17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E122E11A98311C0014A2E7 /* Images.xcassets */; };
@@ -70,9 +68,6 @@
 		177693F41A9EEC6000515073 /* ContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCell.h; sourceTree = "<group>"; };
 		177693F51A9EEC6000515073 /* ContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCell.m; sourceTree = "<group>"; };
 		177693F61A9EEC6000515073 /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
-		177693F91A9EF36D00515073 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		177693FA1A9EF36D00515073 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		177693FB1A9EF36D00515073 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		17E122D11A98311C0014A2E7 /* ThinkOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E122D51A98311C0014A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E122D61A98311C0014A2E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,9 +180,6 @@
 		17E122D31A98311C0014A2E7 /* ThinkOfYou */ = {
 			isa = PBXGroup;
 			children = (
-				8BF765051A9F0034005D2952 /* DetailedMessageController.h */,
-				8BF765061A9F0034005D2952 /* DetailedMessageController.m */,
-				8BF765071A9F0034005D2952 /* DetailedMessageController.xib */,
 				17E122FF1A9836560014A2E7 /* Resources */,
 				17E122D81A98311C0014A2E7 /* AppDelegate.h */,
 				17E122D91A98311C0014A2E7 /* AppDelegate.m */,
@@ -201,6 +193,9 @@
 				17E1230D1A9838710014A2E7 /* ComposeViewController.m */,
 				17E1230E1A9838710014A2E7 /* ComposeViewController.xib */,
 				17E124471A9851C80014A2E7 /* HomeViewController.h */,
+				8BF765051A9F0034005D2952 /* DetailedMessageController.h */,
+				8BF765061A9F0034005D2952 /* DetailedMessageController.m */,
+				8BF765071A9F0034005D2952 /* DetailedMessageController.xib */,
 				17E124481A9851C80014A2E7 /* HomeViewController.m */,
 				17E124491A9851C80014A2E7 /* HomeViewController.xib */,
 				1712B9C31A9EBF3500C225C3 /* ProfileCell.h */,
@@ -212,9 +207,6 @@
 				177693F41A9EEC6000515073 /* ContentCell.h */,
 				177693F51A9EEC6000515073 /* ContentCell.m */,
 				177693F61A9EEC6000515073 /* ContentCell.xib */,
-				177693F91A9EF36D00515073 /* DetailViewController.h */,
-				177693FA1A9EF36D00515073 /* DetailViewController.m */,
-				177693FB1A9EF36D00515073 /* DetailViewController.xib */,
 			);
 			path = ThinkOfYou;
 			sourceTree = "<group>";
@@ -377,7 +369,6 @@
 				17E123061A9836AE0014A2E7 /* write_image.png in Resources */,
 				17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */,
 				177693F81A9EEC6000515073 /* ContentCell.xib in Resources */,
-				177693FD1A9EF36D00515073 /* DetailViewController.xib in Resources */,
 				1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */,
 				8FA7C9181A9C63900089CC40 /* BaseViewController.xib in Resources */,
 				17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */,
@@ -402,7 +393,6 @@
 			files = (
 				17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */,
 				1712B9C61A9EBF3500C225C3 /* ProfileCell.m in Sources */,
-				177693FC1A9EF36D00515073 /* DetailViewController.m in Sources */,
 				8FA7C9171A9C63900089CC40 /* BaseViewController.m in Sources */,
 				177693F71A9EEC6000515073 /* ContentCell.m in Sources */,
 				8BF765081A9F0034005D2952 /* DetailedMessageController.m in Sources */,
