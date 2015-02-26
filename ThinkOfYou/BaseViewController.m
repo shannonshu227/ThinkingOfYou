@@ -1,18 +1,18 @@
 //
-//  ProfileViewController.m
+//  BaseViewController.m
 //  ThinkOfYou
 //
-//  Created by Xiangnan Xu on 2/20/15.
+//  Created by Jatin Pandey on 2/23/15.
 //  Copyright (c) 2015 Yahoo. All rights reserved.
 //
 
-#import "ProfileViewController.h"
+#import "BaseViewController.h"
 
-@interface ProfileViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

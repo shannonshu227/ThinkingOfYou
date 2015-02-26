@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import "HomeViewController.h"
 #import "ComposeViewController.h"
-#import "ProfileViewController.h"
 
 @interface MainViewController ()
 
