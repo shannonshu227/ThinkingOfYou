@@ -12,8 +12,8 @@
 
 @interface MainViewController ()
 
-@property (nonatomic, strong) UINavigationController *nvcHome;
-@property (nonatomic, strong) UINavigationController *nvcNew;
+@property (nonatomic, strong) HomeViewController *nvcHome;
+@property (nonatomic, strong) ComposeViewController *nvcNew;
 
 
 @end
@@ -24,8 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.nvcHome = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
-    self.nvcNew = [[UINavigationController alloc] initWithRootViewController:[[ComposeViewController alloc] init]];
+    self.nvcHome = [[HomeViewController alloc] init];
+    self.nvcNew = [[ComposeViewController alloc] init];
     
     [self.contentView addSubview:self.nvcHome.view];
     self.nvcHome.view.frame = self.contentView.frame;

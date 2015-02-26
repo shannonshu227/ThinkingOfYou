@@ -20,14 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [[self.reminderTextView layer] setBorderColor:[[UIColor grayColor] CGColor]];
-    [[self.reminderTextView layer] setBorderWidth:2.0];
-    [[self.reminderTextView layer] setCornerRadius:15];
-    [self.reminderTextView setTextColor:[UIColor grayColor]];
-    [self.reminderTextView setContentOffset: CGPointMake(0,-220) animated:NO];
+    [self.reminderTextView setTextColor:[UIColor lightGrayColor]];
     self.reminderTextView.text = @"Enter reminder here";
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.reminderTextView.delegate = self;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +42,6 @@
     if ([textView.text isEqualToString:@"Enter reminder here"])
     {
         textView.text = @"";
-        [textView setTextColor:[UIColor blackColor]];
     }
 }
 
@@ -59,7 +56,6 @@
     
     MainViewController *mvc = [[MainViewController alloc] init];
     [self presentViewController:mvc animated:YES completion:nil];
-
 
 //    NSString *msg = [NSString stringWithFormat:@"%@ got your message woo", self.nameField.text];
 }
