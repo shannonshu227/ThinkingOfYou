@@ -21,7 +21,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR5-su-NLp">
-                        <rect key="frame" x="122" y="23" width="42.5" height="20.5"/>
+                        <rect key="frame" x="122" y="23" width="43" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                 <constraints>
                     <constraint firstItem="Il0-zA-NMd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9Qi-hs-fqN"/>
                     <constraint firstItem="lR5-su-NLp" firstAttribute="leading" secondItem="Il0-zA-NMd" secondAttribute="trailing" constant="62" id="FVl-YQ-DyE"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Il0-zA-NMd" secondAttribute="bottom" constant="12" id="hh9-jc-R68"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Il0-zA-NMd" secondAttribute="bottom" constant="12" id="P2M-5K-ijw"/>
                     <constraint firstItem="Il0-zA-NMd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="s7I-ij-XRr"/>
                     <constraint firstItem="lR5-su-NLp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="x1h-PG-lzV"/>
                 </constraints>
