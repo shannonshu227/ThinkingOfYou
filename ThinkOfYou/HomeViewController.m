@@ -7,16 +7,12 @@
 //
 
 #import "HomeViewController.h"
-#import <Parse/Parse.h>
 #import "DetailedMessageController.h"
 #import "ProfileCell.h"
 #import "ContentCell.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) NSArray *users;
-@property (nonatomic, strong) NSArray *reminders;
-@property (nonatomic, strong) NSMutableDictionary *remindersOfUser;
-@property (nonatomic, strong) PFUser *currentUser;
+
 @end
 
 @implementation HomeViewController
@@ -25,6 +21,64 @@
     [super viewWillAppear:animated];
 
 }
+
+- (id)initWithSuperID:(id) superID {
+    self = [super init];
+    if (self) {
+        self.superClassID=superID;
+        NSLog(@"Overwrite init");
+        //Load Data
+        self.users = [[NSArray alloc] init];
+        self.remindersOfUser = [[NSMutableDictionary alloc] init];
+        self.reminders = [[NSArray alloc] init];
+        
+        PFUser *currentUser = [PFUser currentUser];
+        self.currentUser =currentUser;
+        
+        PFQuery *userQuery = [PFUser query];
+        
+        [userQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
+            if (!error) {
+                
+                // The find succeeded. The first 100 objects are available in objects
+                self.users = users;
+                
+                PFQuery *reminderQuery = [PFQuery queryWithClassName:@"Reminder"];
+                [reminderQuery findObjectsInBackgroundWithBlock:^(NSArray *reminders, NSError *error) {
+                    if (!error) {
+                        self.reminders = reminders;
+                        
+                        //NSLog(@"reminders:%lu", (unsigned long)self.reminders.count);
+                        for (PFUser *eachUser in self.users) {
+                            NSString *name = eachUser.username;
+                            
+                            self.remindersOfUser[name] = [[NSMutableArray alloc] init];
+                        }
+                        
+                        for (PFObject *reminder in self.reminders) {
+                            NSString *toName = reminder[@"to"];
+                            NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:toName];
+                            [userReminderArray addObject:reminder];
+                            
+                        }
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.tableView reloadData];
+                        });
+                    } else {
+                        NSLog(@"Errors: %@ %@", error, [error userInfo]);
+                    }
+                }];
+                
+                NSLog(@"users: %lu", (unsigned long)self.users.count);
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -35,58 +89,10 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ProfileCell" bundle:nil] forCellReuseIdentifier:@"ProfileCellID"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ContentCell" bundle:nil] forCellReuseIdentifier:@"ContentCellID"];
-
-    self.users = [[NSArray alloc] init];
-    self.remindersOfUser = [[NSMutableDictionary alloc] init];
-    self.reminders = [[NSArray alloc] init];
-
-    PFUser *currentUser = [PFUser currentUser];
-    self.currentUser =currentUser;
-    
-    PFQuery *userQuery = [PFUser query];
-    
-    [userQuery findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
-        if (!error) {
-            
-            // The find succeeded. The first 100 objects are available in objects
-            self.users = users;
-           
-            PFQuery *reminderQuery = [PFQuery queryWithClassName:@"Reminder"];
-            [reminderQuery findObjectsInBackgroundWithBlock:^(NSArray *reminders, NSError *error) {
-                if (!error) {
-                    self.reminders = reminders;
-                    
-                    //NSLog(@"reminders:%lu", (unsigned long)self.reminders.count);
-                    for (PFUser *eachUser in self.users) {
-                        NSString *name = eachUser.username;
-                        
-                        self.remindersOfUser[name] = [[NSMutableArray alloc] init];
-                    }
-                    
-                    for (PFObject *reminder in self.reminders) {
-                        NSString *toName = reminder[@"to"];
-                        NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:toName];
-                        [userReminderArray addObject:reminder];
-                        
-                    }
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.tableView reloadData];
-                    });
-                } else {
-                    NSLog(@"Errors: %@ %@", error, [error userInfo]);
-                }
-            }];
-
-            NSLog(@"users: %lu", (unsigned long)self.users.count);
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
     
     
     self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    self.tableView.delegate = self.superClassID;
     //self.tableView.rowHeight = UITableViewAutomaticDimension;
     
 }
@@ -120,7 +126,6 @@
         cell.nameLabel.text = self.currentUser.username;
         return cell;
     } else {
-        
         ContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContentCellID" forIndexPath:indexPath];
         NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
         PFObject *reminder = userReminderArray[indexPath.row - 1];
@@ -152,8 +157,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-   DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
+    DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
+    NSLog(@"Elements: %i", self.remindersOfUser.count);
     NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
+    NSLog(@"%@", userReminderArray);
     PFObject *reminder = userReminderArray[indexPath.row - 1];
     dvc.reminder = reminder;
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
