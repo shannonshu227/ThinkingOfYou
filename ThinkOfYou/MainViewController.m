@@ -14,8 +14,8 @@
 
 @interface MainViewController ()
 
-@property (nonatomic, strong) UINavigationController *nvcHome;
-@property (nonatomic, strong) UINavigationController *nvcNew;
+@property (nonatomic, strong) HomeViewController *nvcHome;
+@property (nonatomic, strong) ComposeViewController *nvcNew;
 
 
 @end

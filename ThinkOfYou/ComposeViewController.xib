@@ -17,26 +17,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Alp-F5-s33">
-                    <rect key="frame" x="7" y="163" width="307" height="74"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="8" y="157" width="304" height="115"/>
+                    <color key="backgroundColor" red="0.23513787002100214" green="0.24335512907608692" blue="0.24317580248691714" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.21097801490000001" green="0.25224912690000001" blue="0.44796620240000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtC-h5-BPj">
-                    <rect key="frame" x="13" y="97" width="42" height="21"/>
+                    <rect key="frame" x="13" y="99" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DvP-hC-1V5">
-                    <rect key="frame" x="89" y="93" width="223" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient's full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DvP-hC-1V5">
+                    <rect key="frame" x="89" y="95" width="223" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-xv-aBb">
-                    <rect key="frame" x="144" y="269" width="32" height="30"/>
-                    <state key="normal" title="Post">
+                    <rect key="frame" x="8" y="280" width="304" height="30"/>
+                    <color key="backgroundColor" red="0.77998317042542276" green="0.81736406245954685" blue="0.86389690896739135" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="tintColor" red="0.85575169340802315" green="0.88565726902173914" blue="0.88500463475086899" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Post reminder!">
+                        <color key="titleColor" red="0.1449133832" green="0.1449133832" blue="0.1449133832" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -44,6 +48,7 @@
                     </connections>
                 </button>
             </subviews>
+            <color key="backgroundColor" red="0.14491338315217395" green="0.14491338315217395" blue="0.14491338315217395" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="w6K-9A-Xow" appends="YES" id="30f-cg-9iO"/>
