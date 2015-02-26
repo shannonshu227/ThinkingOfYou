@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"Detail";
     
     NSString *fromUser = [NSString stringWithFormat:@"From: %@", self.reminder[@"from"]];
     self.userName.text = fromUser;
