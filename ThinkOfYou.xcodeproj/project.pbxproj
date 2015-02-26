@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1712B9C61A9EBF3500C225C3 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1712B9C41A9EBF3500C225C3 /* ProfileCell.m */; };
 		1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1712B9C51A9EBF3500C225C3 /* ProfileCell.xib */; };
+		177693F71A9EEC6000515073 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 177693F51A9EEC6000515073 /* ContentCell.m */; };
+		177693F81A9EEC6000515073 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177693F61A9EEC6000515073 /* ContentCell.xib */; };
 		17E122D71A98311C0014A2E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D61A98311C0014A2E7 /* main.m */; };
 		17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E122D91A98311C0014A2E7 /* AppDelegate.m */; };
 		17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E122E11A98311C0014A2E7 /* Images.xcassets */; };
@@ -62,6 +64,9 @@
 		1712B9C31A9EBF3500C225C3 /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
 		1712B9C41A9EBF3500C225C3 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		1712B9C51A9EBF3500C225C3 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		177693F41A9EEC6000515073 /* ContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentCell.h; sourceTree = "<group>"; };
+		177693F51A9EEC6000515073 /* ContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentCell.m; sourceTree = "<group>"; };
+		177693F61A9EEC6000515073 /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		17E122D11A98311C0014A2E7 /* ThinkOfYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThinkOfYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E122D51A98311C0014A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E122D61A98311C0014A2E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -193,6 +198,9 @@
 				8FA7C9141A9C63900089CC40 /* BaseViewController.h */,
 				8FA7C9151A9C63900089CC40 /* BaseViewController.m */,
 				8FA7C9161A9C63900089CC40 /* BaseViewController.xib */,
+				177693F41A9EEC6000515073 /* ContentCell.h */,
+				177693F51A9EEC6000515073 /* ContentCell.m */,
+				177693F61A9EEC6000515073 /* ContentCell.xib */,
 			);
 			path = ThinkOfYou;
 			sourceTree = "<group>";
@@ -356,6 +364,7 @@
 				17E123061A9836AE0014A2E7 /* write_image.png in Resources */,
 				17E123051A9836AE0014A2E7 /* profile_image.png in Resources */,
 				17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */,
+				177693F81A9EEC6000515073 /* ContentCell.xib in Resources */,
 				1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */,
 				8FA7C9181A9C63900089CC40 /* BaseViewController.xib in Resources */,
 				17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */,
@@ -380,6 +389,7 @@
 				17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */,
 				1712B9C61A9EBF3500C225C3 /* ProfileCell.m in Sources */,
 				8FA7C9171A9C63900089CC40 /* BaseViewController.m in Sources */,
+				177693F71A9EEC6000515073 /* ContentCell.m in Sources */,
 				17E122FD1A9831680014A2E7 /* MainViewController.m in Sources */,
 				17E122D71A98311C0014A2E7 /* main.m in Sources */,
 				17E1230F1A9838710014A2E7 /* ComposeViewController.m in Sources */,

@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
 #import "ProfileCell.h"
+#import "ContentCell.h"
 
 @interface HomeViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSArray *users;
@@ -28,9 +29,10 @@
     // Do any additional setup after loading the view from its nib.
     
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellID"];
+    //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellID"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ProfileCell" bundle:nil] forCellReuseIdentifier:@"ProfileCellID"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ContentCell" bundle:nil] forCellReuseIdentifier:@"ContentCellID"];
 
     self.users = [[NSArray alloc] init];
     self.remindersOfUser = [[NSMutableDictionary alloc] init];
@@ -117,13 +119,12 @@
         return cell;
     } else {
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
+        ContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContentCellID" forIndexPath:indexPath];
         NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
         PFObject *reminder = userReminderArray[indexPath.row - 1];
-        NSString *fromUser = [NSString stringWithFormat:@"%@: ", reminder[@"from"]];
-        NSMutableString *text = [[NSMutableString alloc] initWithString:fromUser];
-        [text appendString:reminder[@"content"]];
-        cell.textLabel.text = text;
+        NSString *fromUser = [NSString stringWithFormat:@"From: %@", reminder[@"from"]];
+        cell.fromLabel.text = fromUser;
+        cell.contentLabel.text = reminder[@"content"];
         
         return cell;
     }
@@ -134,8 +135,11 @@
     if( indexPath.row == 0 ) {
         return 73;
     } else {
-        return 50;
+        return 106;
     }
 }
+
+
+
 
 @end
