@@ -158,7 +158,7 @@
         NSLog(@"do nothing");
     } else {
         DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
-        NSLog(@"Elements: %i", self.remindersOfUser.count);
+        NSLog(@"Elements: %lu", (unsigned long)self.remindersOfUser.count);
         NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
         NSLog(@"%@", userReminderArray);
         PFObject *reminder = userReminderArray[indexPath.row - 1];
