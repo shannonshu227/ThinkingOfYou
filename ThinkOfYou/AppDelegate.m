@@ -31,15 +31,12 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
-    
-    [PFFacebookUtils initializeFacebook];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     if (![PFUser currentUser] && ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [PFFacebookUtils initializeFacebook];
+
         PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
         loginViewController.delegate = self;
         [loginViewController setFields:PFLogInFieldsFacebook];
@@ -157,7 +154,6 @@
                     } else {
                         [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
                         [self.window.rootViewController presentViewController:[[MainViewController alloc] init] animated:YES completion:nil];
-
 
                     }
                 }];
