@@ -17,8 +17,10 @@
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface MainViewController ()<UITableViewDelegate>
-@property (nonatomic, strong) HomeViewController *nvcHome;
-@property (nonatomic, strong) ComposeViewController *nvcNew;
+@property (nonatomic, strong) UINavigationController *nvcHome;
+@property (nonatomic, strong) UINavigationController *nvcNew;
+
+
 @end
 
 @implementation MainViewController
@@ -27,12 +29,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    self.nvcHome = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
-//    self.nvcNew = [[UINavigationController alloc] initWithRootViewController:[[ComposeViewController alloc] init]];
+    self.nvcHome = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] initWithSuperID:self]];
+    self.nvcNew = [[UINavigationController alloc] initWithRootViewController:[[ComposeViewController alloc] init]];
     
-    self.nvcHome = [[HomeViewController alloc] initWithSuperID:self];
-    self.nvcNew = [[ComposeViewController alloc] init];
-
     [self.contentView addSubview:self.nvcHome.view];
     self.nvcHome.view.frame = self.contentView.frame;
     
@@ -52,7 +51,7 @@
     for (UIView *v in viewsToRemove) {
         [v removeFromSuperview];
     }
-   
+    
     [self.contentView addSubview:self.nvcHome.view];
     self.nvcHome.view.frame = self.contentView.frame;
 }
@@ -67,17 +66,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
-    NSMutableArray *userReminderArray = [self.nvcHome.remindersOfUser objectForKey:self.nvcHome.currentUser.username];
-    NSLog(@"%@", userReminderArray);
-    PFObject *reminder = userReminderArray[indexPath.row - 1];
-    dvc.reminder = reminder;
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
-    nvc.navigationBar.translucent = NO;
-    
-    [self presentViewController:nvc animated:YES completion:nil];
+    if (indexPath.row == 0) {
+        
+    } else {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
+        
+        HomeViewController *rootController = (HomeViewController *)[self.nvcHome.viewControllers objectAtIndex: 0];
+        NSMutableArray *userReminderArray = [rootController.remindersOfUser objectForKey:rootController.currentUser.username];
+
+        NSLog(@"%@", userReminderArray);
+        PFObject *reminder = userReminderArray[indexPath.row - 1];
+        dvc.reminder = reminder;
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
+        nvc.navigationBar.translucent = NO;
+        
+        [self presentViewController:nvc animated:YES completion:nil];
+    }
     
 }
 

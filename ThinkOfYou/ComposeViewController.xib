@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="nameField" destination="DvP-hC-1V5" id="ecC-Xq-fnp"/>
                 <outlet property="reminderTextView" destination="Alp-F5-s33" id="ebV-Yr-dWV"/>
+                <outlet property="toLabel" destination="R10-EB-iee" id="vSp-1C-N5A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,6 +21,7 @@
                     <rect key="frame" x="8" y="157" width="304" height="115"/>
                     <color key="backgroundColor" red="0.23513787002100214" green="0.24335512907608692" blue="0.24317580248691714" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.21097801490000001" green="0.25224912690000001" blue="0.44796620240000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
@@ -37,23 +39,27 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBn-xv-aBb">
                     <rect key="frame" x="8" y="280" width="304" height="30"/>
                     <color key="backgroundColor" red="0.77998317042542276" green="0.81736406245954685" blue="0.86389690896739135" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <color key="tintColor" red="0.85575169340802315" green="0.88565726902173914" blue="0.88500463475086899" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Post reminder!">
-                        <color key="titleColor" red="0.1449133832" green="0.1449133832" blue="0.1449133832" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.36918676420000002" green="0.59994941189999995" blue="0.77138573229999996" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="onPostButton:" destination="-1" eventType="touchUpInside" id="OVU-0X-08N"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R10-EB-iee">
+                    <rect key="frame" x="23" y="94" width="42" height="29.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.14491338315217395" green="0.14491338315217395" blue="0.14491338315217395" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="w6K-9A-Xow" appends="YES" id="30f-cg-9iO"/>
             </connections>
-            <point key="canvasLocation" x="69" y="392"/>
+            <point key="canvasLocation" x="6" y="390"/>
         </view>
         <tapGestureRecognizer id="w6K-9A-Xow">
             <connections>

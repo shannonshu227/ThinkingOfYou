@@ -10,6 +10,9 @@
 #import "MainViewController.h"
 #import <Parse/Parse.h>
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 @interface ComposeViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *reminderTextView;
 
@@ -17,12 +20,21 @@
 
 @implementation ComposeViewController
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.reminderTextView.backgroundColor = UIColorFromRGB(0xa4d3ee);
+    self.toLabel.textColor = UIColorFromRGB(0x067AB5);
+    self.reminderTextView.textColor = [UIColor whiteColor];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Compose";
     // Do any additional setup after loading the view from its nib.
     [self.reminderTextView setTextColor:[UIColor lightGrayColor]];
     self.reminderTextView.text = @"Enter reminder here";
+    self.toLabel.text = @"To: ";
     self.automaticallyAdjustsScrollViewInsets = NO;
 
     self.reminderTextView.delegate = self;
@@ -46,6 +58,7 @@
     }
 }
 
+
 - (IBAction)onPostButton:(id)sender {
     PFObject *reminder = [PFObject objectWithClassName:@"Reminder"];
     reminder[@"to"] = self.nameField.text;
@@ -58,7 +71,6 @@
     MainViewController *mvc = [[MainViewController alloc] init];
     [self presentViewController:mvc animated:YES completion:nil];
 
-//    NSString *msg = [NSString stringWithFormat:@"%@ got your message woo", self.nameField.text];
 }
 
 @end
