@@ -44,6 +44,8 @@
 		17E1249B1A9A7A680014A2E7 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E124951A9A7A680014A2E7 /* ParseCrashReporting.framework */; };
 		17E1249C1A9A7A680014A2E7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E124961A9A7A680014A2E7 /* ParseFacebookUtils.framework */; };
 		17E1249D1A9A7A680014A2E7 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E124971A9A7A680014A2E7 /* ParseUI.framework */; };
+		8FA7C9171A9C63900089CC40 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7C9151A9C63900089CC40 /* BaseViewController.m */; };
+		8FA7C9181A9C63900089CC40 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA7C9161A9C63900089CC40 /* BaseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,9 @@
 		17E124951A9A7A680014A2E7 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = ThinkOfYou/Frameworks/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		17E124961A9A7A680014A2E7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = ThinkOfYou/Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		17E124971A9A7A680014A2E7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ThinkOfYou/Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		8FA7C9141A9C63900089CC40 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8FA7C9151A9C63900089CC40 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8FA7C9161A9C63900089CC40 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +190,9 @@
 				1712B9C31A9EBF3500C225C3 /* ProfileCell.h */,
 				1712B9C41A9EBF3500C225C3 /* ProfileCell.m */,
 				1712B9C51A9EBF3500C225C3 /* ProfileCell.xib */,
+				8FA7C9141A9C63900089CC40 /* BaseViewController.h */,
+				8FA7C9151A9C63900089CC40 /* BaseViewController.m */,
+				8FA7C9161A9C63900089CC40 /* BaseViewController.xib */,
 			);
 			path = ThinkOfYou;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 				17E123051A9836AE0014A2E7 /* profile_image.png in Resources */,
 				17E122E21A98311C0014A2E7 /* Images.xcassets in Resources */,
 				1712B9C71A9EBF3500C225C3 /* ProfileCell.xib in Resources */,
+				8FA7C9181A9C63900089CC40 /* BaseViewController.xib in Resources */,
 				17E123101A9838710014A2E7 /* ComposeViewController.xib in Resources */,
 				17E1244B1A9851C80014A2E7 /* HomeViewController.xib in Resources */,
 			);
@@ -370,6 +379,7 @@
 			files = (
 				17E122DA1A98311C0014A2E7 /* AppDelegate.m in Sources */,
 				1712B9C61A9EBF3500C225C3 /* ProfileCell.m in Sources */,
+				8FA7C9171A9C63900089CC40 /* BaseViewController.m in Sources */,
 				17E122FD1A9831680014A2E7 /* MainViewController.m in Sources */,
 				17E122D71A98311C0014A2E7 /* main.m in Sources */,
 				17E1230F1A9838710014A2E7 /* ComposeViewController.m in Sources */,

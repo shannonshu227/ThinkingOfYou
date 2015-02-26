@@ -31,7 +31,6 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     if (![PFUser currentUser] && ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
@@ -41,7 +40,7 @@
         loginViewController.delegate = self;
         [loginViewController setFields:PFLogInFieldsFacebook];
         self.window.rootViewController = loginViewController;
-        
+
     } else {
         self.window.rootViewController = [[MainViewController alloc] init];
     }
