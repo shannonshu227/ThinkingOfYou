@@ -153,7 +153,9 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
    DetailedMessageController *dvc = [[DetailedMessageController alloc] init];
-    dvc.reminder = self.reminders[indexPath.row - 1];
+    NSMutableArray *userReminderArray = [self.remindersOfUser objectForKey:self.currentUser.username];
+    PFObject *reminder = userReminderArray[indexPath.row - 1];
+    dvc.reminder = reminder;
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:dvc];
     nvc.navigationBar.translucent = NO;
     

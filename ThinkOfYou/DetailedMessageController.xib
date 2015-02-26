@@ -28,20 +28,14 @@
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rex-PP-AbX">
-                    <rect key="frame" x="28" y="193" width="124.5" height="33.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rex-PP-AbX">
+                    <rect key="frame" x="28" y="161" width="264.5" height="175.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Feb, 5:21 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldz-Jv-ZDl">
-                    <rect key="frame" x="28" y="259" width="127" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPj-zU-q2a">
-                    <rect key="frame" x="128" y="329" width="46" height="30"/>
+                    <rect key="frame" x="137" y="454" width="46" height="30"/>
                     <state key="normal" title="Back">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -49,19 +43,21 @@
                         <action selector="onBackButton:" destination="-1" eventType="touchUpInside" id="R9a-MT-8aD"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25 Feb, 5:21 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldz-Jv-ZDl">
+                    <rect key="frame" x="28" y="368" width="127" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="tEq-ec-Ax6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="114" id="0hM-QW-FCi"/>
-                <constraint firstItem="rex-PP-AbX" firstAttribute="top" secondItem="a81-yJ-OdU" secondAttribute="bottom" constant="59" id="47n-tj-khK"/>
                 <constraint firstItem="a81-yJ-OdU" firstAttribute="leading" secondItem="tEq-ec-Ax6" secondAttribute="trailing" constant="26" id="5wJ-J2-g3i"/>
-                <constraint firstItem="Ldz-Jv-ZDl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="CYk-Xa-6fV"/>
-                <constraint firstItem="Ldz-Jv-ZDl" firstAttribute="top" secondItem="rex-PP-AbX" secondAttribute="bottom" constant="32" id="D09-r1-QBK"/>
-                <constraint firstItem="rex-PP-AbX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="PhK-Mr-iR5"/>
                 <constraint firstItem="a81-yJ-OdU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="114" id="aAu-Fg-YPd"/>
                 <constraint firstItem="tEq-ec-Ax6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="pj0-BF-5hH"/>
             </constraints>
-            <point key="canvasLocation" x="820" y="568"/>
+            <point key="canvasLocation" x="660" y="567"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
