@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"Detail";
     
-    NSString *fromUser = [NSString stringWithFormat:@"From: %@", self.reminder[@"from"]];
+    NSString *fromUser = [NSString stringWithFormat:@" %@", self.reminder[@"from"]];
     self.userName.text = fromUser;
     self.message.text = self.reminder[@"content"];
     self.timeStamp.text = self.reminder[@"createdAt"];
@@ -39,9 +39,11 @@
     
     if (picName != nil) {
         self.emojiViews = [[NSMutableArray alloc] init];
-        int count = 6;
+        int count = 20;
         while (count > 0) {
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(count*50, count*10, 30, 30)];
+            int x = arc4random_uniform(320);
+            int y = arc4random_uniform(100);
+            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 30, 30)];
             
             imageView.image = [UIImage imageNamed:picName];
             [self.emojiViews addObject:imageView];
@@ -71,18 +73,17 @@
 - (void) runAnimation {
     
 
-    [UIView animateWithDuration:5 animations:^{
+    [UIView animateWithDuration:3 animations:^{
 
         NSUInteger count = self.emojiViews.count;
         while (count > 0) {
             UIImageView *emojiView = self.emojiViews[count-1];
-            if (count == 5) {
-                emojiView.center = CGPointMake(self.emojiView.center.x+20, self.emojiView.center.y + 300 + count*50);
-            } else if (count == 4) {
-                emojiView.center = CGPointMake(self.emojiView.center.x + 50, self.emojiView.center.y + 300 + count*50);
-            } else {
-                emojiView.center = CGPointMake(self.emojiView.center.x+100*count, self.emojiView.center.y + 300 + count*50);
-            }
+
+            
+            int x = arc4random_uniform(320);
+            int y = arc4random_uniform(200)+368;
+            emojiView.Center =
+            CGPointMake(x, y);
             emojiView.alpha = 0;
             emojiView.transform = CGAffineTransformMakeScale(3, 3);
             count --;
